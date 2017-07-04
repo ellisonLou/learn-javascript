@@ -60,6 +60,7 @@ javascript基础问题
   1. 当我们在require的时候，javascript到底在干什么？
   官方文档： https://nodejs.org/dist/latest-v6.x/docs/api/modules.html
   2. 两个模块相互引用会造成什么样的后果？设计上如何避免这个问题？
+    
   3. module.export 和 exports有什么区别？
   4. 严格模式和非严格模式的区别是什么？
   5. es6中的export 和 import
