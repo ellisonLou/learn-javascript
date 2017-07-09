@@ -58,10 +58,18 @@ javascript基础问题
 
 二. 模块
   1. 当我们在require的时候，javascript到底在干什么？
-  官方文档： https://nodejs.org/dist/latest-v6.x/docs/api/modules.html
+    官方文档： https://nodejs.org/dist/latest-v6.x/docs/api/modules.html
   2. 两个模块相互引用会造成什么样的后果？设计上如何避免这个问题？
-    
+    相互引用不会造成死循环，node在设计的时候考虑到了这一点。但是在使用的过程中需要协调好。
+    见/cicles a.js b.js main.js
   3. module.export 和 exports有什么区别？
+    exports只是module.exports的一个引用，因此重新给exports赋值对象是没有用的，require方法加载的模块实际上是module.exports的对象。
   4. 严格模式和非严格模式的区别是什么？
-  5. es6中的export 和 import
-    export简单用法：
+  5. 什么是CommonJs规范和AMD规范？
+    CommonJs规定：
+    1. 所有代码都运行在模块作用域，不会污染全局作用域。
+      问题： 那么定义全局变量呢？
+    2. 模块可以被多次加载，但是只有在第一次加载的时候运行一次，然后运行结果就被缓存，之后再次加载就调用缓存的结果。
+      （这里解释了/circles/main.js 同时引用了a.js 和 b.js 和单独引用a.js结果一样；因为a.js里面引用了b.js，当b.js再次被main.js引用的时候，就不会再次运行里面的代码，而是直接使用缓存的代码）
+    3. 模块加载顺序就是代码的顺序。
+      CommonJs规定模块加载同步进行。
