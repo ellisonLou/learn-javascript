@@ -73,3 +73,14 @@ javascript基础问题
       （这里解释了/circles/main.js 同时引用了a.js 和 b.js 和单独引用a.js结果一样；因为a.js里面引用了b.js，当b.js再次被main.js引用的时候，就不会再次运行里面的代码，而是直接使用缓存的代码）
     3. 模块加载顺序就是代码的顺序。
       CommonJs规定模块加载同步进行。
+  6. 什么是热更新，为什么使用热更新？
+    文章：https://cnodejs.org/topic/543889cea220049637e41946
+    热更新json和js的区别？
+    nodejs vm 是什么？
+
+三、异步与Promise
+  1. 异步的存在是为了什么？
+  2. 事件模式
+  3. 订阅者模式
+  4. Promise
+
