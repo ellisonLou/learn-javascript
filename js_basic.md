@@ -80,7 +80,14 @@ javascript基础问题
 
 三、异步与Promise
   1. 异步的存在是为了什么？
+    javascript是单线程，为了防止进程阻塞，引入了异步。
   2. 事件模式
+    Event是javascript中的重要概念。
   3. 订阅者模式
   4. Promise
+    为了防止“回调地狱”，bluebird等第三方库实现了promise， 在之后的es6中，也将promise带入到语法当中。
+    和Promise功能相近的还有Q等。
+    有关Promise的实现和一些坑都在./Promise中有示例。
+  5. 什么是async和awit
+
 
