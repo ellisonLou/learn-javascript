@@ -97,3 +97,6 @@ javascript基础问题
     和Promise功能相近的还有Q等。
     有关Promise的实现和一些坑都在./Promise中有示例。
   5. 什么是async和awit
+
+四、nodejs中的Events
+  1. 试验nodejs中的emit是同步还是异步 ./Event中
